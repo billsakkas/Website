@@ -1,6 +1,6 @@
 {"links":[
   {"id":1, "label":"label1", "image":"image1", "description":"description1"},
-  {"id":2, "label":"label2", "image":"image2", "description":"description2"}
-  {"id":3, "label":"label3", "image":"image3", "description":"description3"}
+  {"id":2, "label":"label2", "image":"image2", "description":"description2"},
+  {"id":3, "label":"label3", "image":"image3", "description":"description3"},
   {"id":4, "label":"label4", "image":"image4", "description":"description4"}
 ]}
