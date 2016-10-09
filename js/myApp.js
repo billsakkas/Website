@@ -12,12 +12,12 @@ function myController(getItemsService) {
   var ctrl = this;
 
   ctrl.getItems = function (jsonFile) {
-    console.log("Clicked! :D");
+    // console.log("Clicked! :D");
     ctrl.recieved = undefined;
     getItemsService.getItems(jsonFile)
     .then(function (result) {
       ctrl.recieved = result;
-      console.log(ctrl.recieved);
+      // console.log(ctrl.recieved);
     })
     .catch(function(error) {
       console.log("Something went wrong!!! Error code = " + error);
@@ -44,7 +44,7 @@ function getItemsService($http) {
       // url: (link + jsonFile)
       url: ("https://raw.githubusercontent.com/billsakkas/Website/master/json/Collection1.json")
     }).then(function(response){
-      console.log(response.data.links[0]);
+      // console.log(response.data.links[0]);
       return response.data.links
     });
   }
@@ -54,7 +54,7 @@ function getItemsService($http) {
 function FoundItemsDirective() {
   var ddo = {
         restrict: 'E',
-        templateUrl: 'foundItemsDirective/foundItemsDirective.html',
+        templateUrl: 'directiveTemplates/foundItemsDirective.html',
         scope: {
             items: '<recievedItems'
         },
