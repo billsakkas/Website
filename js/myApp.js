@@ -53,8 +53,8 @@ function getItemsService($http) {
 
 function FoundItemsDirective() {
   var ddo = {
-        restrict: '=',
-        template: 'Hello',
+        restrict: 'E',
+        templateUrl: 'foundItemsDirective.html',
         scope: {
             items: '<recievedItems'
         },
