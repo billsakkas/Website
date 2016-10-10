@@ -11,10 +11,10 @@ myController.$inject = ['getItemsService'];
 function myController(getItemsService) {
   var ctrl = this;
   ctrl.title = "title";
-
+  ctrl.recieved = undefined;
   ctrl.getItems = function (jsonFile) {
     // console.log("Clicked! :D");
-    ctrl.recieved = undefined;
+
     getItemsService.getItems(jsonFile)
     .then(function (result) {
       ctrl.recieved = result;
@@ -44,10 +44,12 @@ function getItemsService($http) {
     return $http({
       method: "GET",
       // url: (link + jsonFile)
-      url: ("https://raw.githubusercontent.com/billsakkas/Website/master/json/Collection1.json")
+      // url: ("https://raw.githubusercontent.com/billsakkas/Website/master/json/Collection1.json")
+      url: ("json/" + jsonFile + ".json")
     }).then(function(response){
+      console.log(response.data.links);
       // console.log(response.data.links[0]);
-      return response.data.links
+      return response.data.links;
     });
   }
 }

@@ -6,6 +6,12 @@
     <title></title>
     <link rel="stylesheet" href="css/bootstrap.min.css" charset="utf-8">
     <link rel="stylesheet" href="css/styles.css" charset="utf-8">
+    <!-- JS - Must load before HTML -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/myApp.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- JS Scripts -->
   </head>
   <body ng-Controller="myController as ctrl">
     <!-- Navbar -->
@@ -35,9 +41,9 @@
         <!-- Sidebar -->
         <div class="col-sm-3 col-md-2 sidebar" >
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="" ng-click="ctrl.getItems(Collection1)">Collection 1</a></li>
-            <li><a href="">Collection 2</a></li>
-            <li><a href="">Collection 3</a></li>
+            <li class="active"><a href="" ng-click="ctrl.getItems(&quot;Collection1&quot;)">Collection 1</a></li>
+            <li><a href="" ng-click="ctrl.getItems(&quot;Collection2&quot;)">Collection 2</a></li>
+            <li><a href="" ng-click="ctrl.getItems(&quot;Collection3&quot;)">Collection 3</a></li>
           </ul>
         </div>
         <!-- End of Sidebar -->
@@ -53,10 +59,5 @@
         </div>
       </div>
     </div>
-    <!-- Insert JS here -->
-    <script src="js/angular.min.js"></script>
-    <script src="js/myApp.js"></script>
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
