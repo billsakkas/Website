@@ -7,6 +7,9 @@ body {
   padding-top: 50px;
 }
 
+.noUnderline {
+  text-decoration: none;
+}
 
 /*
  * Global add-ons

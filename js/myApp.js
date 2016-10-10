@@ -10,6 +10,7 @@ angular.module('myApp', [])
 myController.$inject = ['getItemsService'];
 function myController(getItemsService) {
   var ctrl = this;
+  ctrl.title = "title";
 
   ctrl.getItems = function (jsonFile) {
     // console.log("Clicked! :D");
@@ -17,6 +18,7 @@ function myController(getItemsService) {
     getItemsService.getItems(jsonFile)
     .then(function (result) {
       ctrl.recieved = result;
+      ctrl.title = "Title"
       // console.log(ctrl.recieved);
     })
     .catch(function(error) {

@@ -22,9 +22,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
           <ul class="nav navbar-nav navbar-right visible-xs">
-            <li><a href="#">Collection 1</a></li>
-            <li><a href="#">Collection 2</a></li>
-            <li><a href="#">Collection 3</a></li>
+            <li><a href="" ng-click="ctrl.getItems(link)">Collection 1</a></li>
+            <li><a href="">Collection 2</a></li>
+            <li><a href="">Collection 3</a></li>
           </ul>
         </div>
       </div>
@@ -35,19 +35,19 @@
         <!-- Sidebar -->
         <div class="col-sm-3 col-md-2 sidebar" >
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="#" ng-click="ctrl.getItems(link)">Collection 1</a></li>
-            <li><a href="#">Collection 2</a></li>
-            <li><a href="#">Collection 3</a></li>
+            <li class="active"><a href="" ng-click="ctrl.getItems(Collection1)">Collection 1</a></li>
+            <li><a href="">Collection 2</a></li>
+            <li><a href="">Collection 3</a></li>
           </ul>
         </div>
         <!-- End of Sidebar -->
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Title</h1>
+          <h2 class="page-header text-center">{{ctrl.title}}</h2>
           <div class="row placeholders">
             <!-- <h1>{{ctrl.recieved}}</h1> -->
             <found-items recieved-items="ctrl.recieved">
 
-            <h2 ng-show="ctrl.notRecieved()">ERROR - Something went wrong!</h2>
+            <!-- <h2 ng-show="ctrl.notRecieved()">ERROR - Something went wrong!</h2> -->
           </found-items>
           </div>
         </div>
