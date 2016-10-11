@@ -5,7 +5,7 @@ angular.module('myApp', [])
 .controller('myController', myController)
 .service('getItemsService', getItemsService)
 .directive('foundItems', FoundItemsDirective)
-.constant('link', 'https://github.com/billsakkas/Website/blob/master/json/')
+
 
 myController.$inject = ['getItemsService'];
 function myController(getItemsService) {
@@ -13,13 +13,13 @@ function myController(getItemsService) {
   ctrl.title = "title";
   ctrl.recieved = undefined;
   ctrl.getItems = function (jsonFile) {
-    // console.log("Clicked! :D");
+    
 
     getItemsService.getItems(jsonFile)
     .then(function (result) {
       ctrl.recieved = result;
-      ctrl.title = "Title"
-      // console.log(ctrl.recieved);
+      ctrl.title = "Title";
+      
     })
     .catch(function(error) {
       console.log("Something went wrong!!! Error code = " + error);
@@ -48,7 +48,6 @@ function getItemsService($http) {
       url: ("json/" + jsonFile + ".json")
     }).then(function(response){
       console.log(response.data.links);
-      // console.log(response.data.links[0]);
       return response.data.links;
     });
   }
